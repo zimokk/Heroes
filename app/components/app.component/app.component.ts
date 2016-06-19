@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
-import { HeroDetailComponent } from './hero-detail.component';
+import { Hero } from '../../entity/hero/hero';
+import { HeroService } from '../../servicies/hero.service/hero.service';
+import { HeroDetailComponent } from '../hero-detail.component/hero-detail.component';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.template.html',
-    styleUrls:['app/app.style.css'],
+    templateUrl: 'app/templates/app.template.html',
+    styleUrls:['app//styles/app.style.css'],
     directives: [HeroDetailComponent],
     providers: [HeroService]
 })
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit{
     getHeroes(){
         this.heroService.getHeroes()
             .then( 
-                heroes=>this.heroes = heroes
+                heroes => this.heroes = heroes
             );
     }
     onSelect(hero: Hero){

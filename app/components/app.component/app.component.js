@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_service_1 = require('./hero.service');
-var hero_detail_component_1 = require('./hero-detail.component');
+var hero_service_1 = require('../../servicies/hero.service/hero.service');
+var hero_detail_component_1 = require('../hero-detail.component/hero-detail.component');
 var AppComponent = (function () {
     function AppComponent(heroService) {
         this.heroService = heroService;
@@ -30,8 +30,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/app.template.html',
-            styleUrls: ['app/app.style.css'],
+            templateUrl: 'app/templates/app.template.html',
+            styleUrls: ['app//styles/app.style.css'],
             directives: [hero_detail_component_1.HeroDetailComponent],
             providers: [hero_service_1.HeroService]
         }), 
