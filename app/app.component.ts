@@ -1,19 +1,34 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-export class Hero{
-    id: number;
-    name: string;
-}
+import { Hero } from './hero';
+import { HeroService } from './hero.service';
+import { HeroDetailComponent } from './hero-detail.component';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/appTemplate.html'
+    templateUrl: 'app/app.template.html',
+    styleUrls:['app/app.style.css'],
+    directives: [HeroDetailComponent],
+    providers: [HeroService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
     title = 'Tour of Heroes';
-    hero: Hero = {
-        id: 1 ,
-        name: 'Windstorm'
-    };
+    public heroes: Hero[];
+    selectedHero: Hero;
+    ngOnInit(){
+        this.getHeroes();
+    }
+    constructor(private heroService: HeroService){
+
+    }
+    getHeroes(){
+        this.heroService.getHeroes()
+            .then( 
+                heroes=>this.heroes = heroes
+            );
+    }
+    onSelect(hero: Hero){
+        this.selectedHero = hero;
+    }
  }
