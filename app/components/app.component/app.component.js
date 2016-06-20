@@ -9,7 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_deprecated_1 = require('@angular/router-deprecated');
 var heroes_component_1 = require('../heroes.component/heroes.component');
+var dashboard_component_1 = require('../dashboard.component/dashboard.component');
+var hero_detail_component_1 = require('../hero-detail.component/hero-detail.component');
 var hero_service_1 = require('../../servicies/hero.service/hero.service');
 var AppComponent = (function () {
     function AppComponent() {
@@ -19,9 +22,27 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             templateUrl: 'app/templates/app.template.html',
-            directives: [heroes_component_1.HeroesComponent],
-            providers: [hero_service_1.HeroService]
-        }), 
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            providers: [router_deprecated_1.ROUTER_PROVIDERS, hero_service_1.HeroService]
+        }),
+        router_deprecated_1.RouteConfig([
+            {
+                path: '/heroes',
+                name: 'Heroes',
+                component: heroes_component_1.HeroesComponent
+            },
+            {
+                path: '/dashboard',
+                name: 'Dashboard',
+                component: dashboard_component_1.DashboardComponent,
+                useAsDefault: true
+            },
+            {
+                path: '/detail/:id',
+                name: 'HeroDetail',
+                component: hero_detail_component_1.HeroDetailComponent
+            }
+        ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
