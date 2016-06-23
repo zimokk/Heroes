@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var hero_service_1 = require('../../servicies/hero.service/hero.service');
+var dashboard_part_component_1 = require('../dashboard-part.component/dashboard-part.component');
 var DashboardComponent = (function () {
     function DashboardComponent(router, heroService) {
         this.router = router;
@@ -30,7 +31,8 @@ var DashboardComponent = (function () {
         core_1.Component({
             selector: 'my-dashboard',
             templateUrl: 'app/templates/dashboard.template.html',
-            styleUrls: ['app/styles/dashboard.component.css']
+            styleUrls: ['app/styles/dashboard.component.css'],
+            directives: [dashboard_part_component_1.DashboardPartComponent]
         }), 
         __metadata('design:paramtypes', [router_deprecated_1.Router, hero_service_1.HeroService])
     ], DashboardComponent);

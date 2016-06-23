@@ -3,12 +3,14 @@ import { Router } from '@angular/router-deprecated';
 
 import { Hero } from '../../entity/hero/hero';
 import { HeroService } from '../../servicies/hero.service/hero.service';
+import { DashboardPartComponent } from '../dashboard-part.component/dashboard-part.component';
 
 
 @Component({
     selector: 'my-dashboard',
     templateUrl: 'app/templates/dashboard.template.html',
-    styleUrls: ['app/styles/dashboard.component.css']
+    styleUrls: ['app/styles/dashboard.component.css'],
+    directives: [DashboardPartComponent]
 })
 
 export class DashboardComponent implements OnInit {
