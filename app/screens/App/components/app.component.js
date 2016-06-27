@@ -10,10 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var heroes_component_1 = require('../heroes.component/heroes.component');
-var dashboard_component_1 = require('../dashboard.component/dashboard.component');
-var hero_detail_component_1 = require('../hero-detail.component/hero-detail.component');
-var hero_service_1 = require('../../servicies/hero.service/hero.service');
+var heroes_component_1 = require('../screens/Heroes/components/heroes.component');
+var dashboard_component_1 = require('../screens/Dashboard/components/dashboard.component');
+var hero_detail_component_1 = require('../screens/Heroes/screens/HeroDetail/components/hero-detail.component');
+var hero_service_1 = require('../shared/servicies/hero.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tout of Heroes';

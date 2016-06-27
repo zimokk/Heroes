@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var hero_service_1 = require('../../servicies/hero.service/hero.service');
-var dashboard_part_component_1 = require('../dashboard-part.component/dashboard-part.component');
+var hero_service_1 = require('../../../shared/servicies/hero.service');
+var dashboard_part_component_1 = require('./dashboard-part.component');
 var DashboardComponent = (function () {
     function DashboardComponent(router, heroService) {
         this.router = router;

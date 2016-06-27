@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router-deprecated';
 
-import { Hero } from '../../entity/hero/hero';
-import { HeroService } from '../../servicies/hero.service/hero.service';
-import { DashboardPartComponent } from '../dashboard-part.component/dashboard-part.component';
+import { Hero } from '../../../shared/utils/hero';
+import { HeroService } from '../../../shared/servicies/hero.service';
+import { DashboardPartComponent } from './dashboard-part.component';
 
 
 @Component({
@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
     }
 
     gotoDetail(hero: Hero){
-        let link = ['HeroDetail',{ id:hero.id }];
+        let link = ['HeroDetail',{ id: hero.id }];
         this.router.navigate(link);
     }
 }

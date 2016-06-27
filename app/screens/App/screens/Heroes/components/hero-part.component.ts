@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router-deprecated';
 
-import { Hero } from '../../entity/hero/hero';
-import { HeroService } from '../../servicies/hero.service/hero.service';
+import { Hero } from '../../../shared/utils/hero';
+import { HeroService } from '../../../shared/servicies/hero.service';
 
 @Component({
     selector: 'hero-part',

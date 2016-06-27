@@ -1,6 +1,6 @@
 import { Component, Input, trigger, state, style, transition, animate} from '@angular/core' ;
 
-import { Hero } from '../../entity/hero/hero';
+import { Hero } from '../../../shared/utils/hero';
 
 @Component({
     selector: 'dashboard-part',

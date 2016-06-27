@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var hero_1 = require('../../entity/hero/hero');
-var hero_service_1 = require('../../servicies/hero.service/hero.service');
+var hero_1 = require('../../../shared/utils/hero');
+var hero_service_1 = require('../../../shared/servicies/hero.service');
 var HeroPartComponent = (function () {
     function HeroPartComponent(router, heroService) {
         this.router = router;
