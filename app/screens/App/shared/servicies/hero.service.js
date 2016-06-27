@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 require('rxjs/add/operator/toPromise');
 var http_1 = require('@angular/http');
-var hero_1 = require('../utils/hero');
 var HeroService = (function () {
     function HeroService(http) {
         this.http = http;
@@ -47,7 +46,8 @@ var HeroService = (function () {
             .toPromise()
             .then(function (res) {
             res.json().data;
-            _this.all.push(new hero_1.Hero(res.json().data.id, res.json().data.name));
+            hero.id = res.json().data.id;
+            _this.all.push(hero);
         })
             .catch(this.handleError);
     };
@@ -59,8 +59,7 @@ var HeroService = (function () {
             .put(url, JSON.stringify(hero), { headers: headers })
             .toPromise()
             .then(function (response) {
-            debugger;
-            hero;
+            //hero;
         })
             .catch(this.handleError);
     };

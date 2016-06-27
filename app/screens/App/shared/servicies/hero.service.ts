@@ -35,11 +35,8 @@ export class HeroService {
              .toPromise()
              .then(res => {
                  res.json().data;
-                 this.all.push(
-                     new Hero(
-                         res.json().data.id,
-                          res.json().data.name )
-                    );
+                 hero.id = res.json().data.id;
+                 this.all.push( hero );
              })
              .catch(this.handleError);
     }
@@ -52,8 +49,7 @@ export class HeroService {
                 .put(url, JSON.stringify(hero), {headers: headers})
                 .toPromise()
                 .then((response) => {
-                    debugger
-                    hero;
+                    //hero;
                 })
                 .catch(this.handleError);
     }
