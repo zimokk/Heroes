@@ -19,7 +19,6 @@ var HeroPartComponent = (function () {
     }
     HeroPartComponent.prototype.delete = function (hero, event) {
         var _this = this;
-        debugger;
         event.stopPropagation();
         this.heroService
             .delete(hero)

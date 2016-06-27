@@ -44,8 +44,8 @@ var HeroDetailComponent = (function () {
         this.heroService
             .save(this.hero)
             .then(function (hero) {
-            _this.hero = hero; // saved hero, w/ id if new
-            _this.goBack(hero);
+            // this.hero = hero; // saved hero, w/ id if new
+            //this.goBack(hero);
         })
             .catch(function (error) { return _this.error = error; }); // TODO: Display error message
     };

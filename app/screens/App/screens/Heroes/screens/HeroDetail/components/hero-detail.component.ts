@@ -23,12 +23,11 @@ export class HeroDetailComponent implements OnInit {
 
     ngOnInit(){
         if (this.routeParams.get('id') !== null) {
-        let id = +this.routeParams.get('id');
-        this.navigated = true;
-        this.heroService.getHero(id)
+            let id = +this.routeParams.get('id');
+            this.navigated = true;
+            this.heroService.getHero(id)
             .then(hero => this.hero = hero);
-        }
-        else {
+        } else {
             this.navigated = false;
             this.hero = new Hero();
         }
@@ -45,8 +44,8 @@ export class HeroDetailComponent implements OnInit {
         this.heroService
         .save(this.hero)
         .then(hero => {
-        this.hero = hero; // saved hero, w/ id if new
-        this.goBack(hero);
+           // this.hero = hero; // saved hero, w/ id if new
+            //this.goBack(hero);
         })
         .catch(error => this.error = error); // TODO: Display error message
     }

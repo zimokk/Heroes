@@ -17,7 +17,6 @@ export class HeroPartComponent {
         private router: Router,
         private heroService: HeroService) { }
     delete(hero: Hero, event: any) {
-        debugger;
         event.stopPropagation();
         this.heroService
             .delete(hero)
