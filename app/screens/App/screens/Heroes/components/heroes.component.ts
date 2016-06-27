@@ -42,14 +42,9 @@ export class HeroesComponent implements OnInit {
         this.heroService
             .delete(hero)
             .then(res => {
-            //this.getHeroes(); 
-            console.dir(this.heroService.all);
-            console.dir(this.heroes);
             if (this.selectedHero === hero) { this.selectedHero = null; }
             })
             .catch(error => this.error = error); // TODO: Display error message 
-        console.dir(this.heroService.all);
-        console.dir(this.heroes);
     }
     ngOnInit() {
         this.getHeroes();

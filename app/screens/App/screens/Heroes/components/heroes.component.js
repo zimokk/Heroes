@@ -43,16 +43,11 @@ var HeroesComponent = (function () {
         this.heroService
             .delete(hero)
             .then(function (res) {
-            //this.getHeroes(); 
-            console.dir(_this.heroService.all);
-            console.dir(_this.heroes);
             if (_this.selectedHero === hero) {
                 _this.selectedHero = null;
             }
         })
             .catch(function (error) { return _this.error = error; }); // TODO: Display error message 
-        console.dir(this.heroService.all);
-        console.dir(this.heroes);
     };
     HeroesComponent.prototype.ngOnInit = function () {
         this.getHeroes();
