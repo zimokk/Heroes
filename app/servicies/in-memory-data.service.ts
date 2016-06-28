@@ -1,5 +1,5 @@
 export class InMemoryDataService{
-    createDb(){
+    createDb() {
         let heroes = [
             {id: 11, name: 'Mr. Nice'},
             {id: 12, name: 'Narco'},
