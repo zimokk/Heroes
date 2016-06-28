@@ -22,6 +22,16 @@ var Hero = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Hero.prototype, "skills", {
+        get: function () {
+            return this._skills;
+        },
+        set: function (skills) {
+            this._skills = skills;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Hero;
 }());
 exports.Hero = Hero;
